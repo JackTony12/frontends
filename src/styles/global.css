@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme{
+    --color-primary:#7eb9b0;
+    --color-primary2:#c3e2dd;
+    --color-bgButtons:#8dc7be;
+}
+.colors{
+    color:#c3e2dd;
+    color: #7eb9b0;
+
+}
+.btn{
+    @apply  text-gray-500 rounded-xl py-2 px-4 font-medium hover:text-white hover:bg-white/30 backdrop-blur-xl transition duration-200 font-[poppins] 
+
+}
+.containerAnimate{
+    @apply py-4 px-2 bg-green-300 transition duration-200  rounded-4xl shadow-xl
+}
+.appleAnimate{
+    @apply scale-250 translate-y-24 drop-shadow-xl/30
+}
+.infoApple{
+    @apply py-4 px-2 font-[poppins]
+}
+.cTitle{
+    @apply text-xl font-bold text-green-500 text-center
+}
+.cPrice{
+@apply bg-green-200 mt-8
+}
+.spanPrice{
+    @apply text-2xl text-green-700 font-bold
+}
+.benefits{
+    @apply text-gray-800 text-lg mt-4 mb-2 tracking-widest 
+}
+.ulBenefits{
+    @apply text-green-600 font-bold text-sm
+}
+.cBtn{
+    @apply mt-6 bg-green-600 text-white font-bold rounded-lg py-2 px-4 mx-auto hover:cursor-pointer
+}
