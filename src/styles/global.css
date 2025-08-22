@@ -4,18 +4,22 @@
     --color-primary:#7eb9b0;
     --color-primary2:#c3e2dd;
     --color-bgButtons:#8dc7be;
+    --color-text:#303030;
 }
 .colors{
     color:#c3e2dd;
-    color: #7eb9b0;
+    color: #303030;
 
+}
+.blackF_w{
+    @apply font-[BlackF] text-white font-bold  
 }
 .btn{
     @apply  text-gray-500 rounded-xl py-2 px-4 font-medium hover:text-white hover:bg-white/30 backdrop-blur-xl transition duration-200 font-[poppins] 
 
 }
 .containerAnimate{
-    @apply py-4 px-2 bg-green-300 transition duration-200  rounded-4xl shadow-xl
+    @apply py-4 px-2 bg-green-300 transition duration-200  rounded-[30px] shadow-xl
 }
 .appleAnimate{
     @apply scale-250 translate-y-24 drop-shadow-xl/30
@@ -33,7 +37,7 @@
     @apply text-2xl text-green-700 font-bold
 }
 .benefits{
-    @apply text-gray-800 text-lg mt-4 mb-2 tracking-widest 
+    @apply text-gray-600 text-lg mt-4 mb-2 tracking-widest 
 }
 .ulBenefits{
     @apply text-green-600 font-bold text-sm

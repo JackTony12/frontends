@@ -1,0 +1,33 @@
+---
+import midu from "/public/images/midudev.jpg"
+---
+
+<div class='my-12'>
+    <h2 class='font-[BlackF] font-bold text-4xl text-text'>TOOLS</h2>
+</div>
+
+<section
+    class='grid grid-cols-6 grid-rows-8 gap-4 w-full h-[600px] [&_div]:overflow-hidden [&_div]:rounded-xl'
+>
+    <div class='col-span-3 row-span-5 group relative flex bg-blue-600'>
+        <img
+            class='h-full mask-r-from-30% group-hover:scale-120 group-hover:blur-sm transition duration-200'
+            src={midu.src}
+            alt='Midu'
+        />
+        <h3 class='absolute p-2 blackF_w'>Midudev</h3>
+        <div class='absolute bottom-0 p-2 backdrop-blur-2xl'>
+            <p class='text-white text-sm'>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Assumenda dolores illum impedit ipsa natus pariatur, harum dolor
+                reprehenderit hic asperiores qui, ut quod quia perferendis.
+                Error possimus fugit provident at.
+            </p>
+            <a target='_blank' href='https://midudev.com'>Ir</a>
+        </div>
+    </div>
+    <div class='col-span-3 row-span-5 col-start-4 bg-amber-600'>2</div>
+    <div class='col-span-2 row-span-3 row-start-6'>3</div>
+    <div class='col-span-3 row-span-3 col-start-3 row-start-6'>4</div>
+    <div class='row-span-3 col-start-6 row-start-6'>5</div>
+</section>
