@@ -1,12 +1,15 @@
 ---
 import logo from "/public/images/logoHero.png"
+import Layout from "../../layouts/Layout.astro"
 ---
 
-<nav class='flex w-full pt-8 px-15 items-center justify-between h-16'>
-    <img class='size-10 rounded-sm' src={logo.src} alt='Logo frontends' />
-    <ul class='flex gap-3'>
-        <li><a class='btn' href='#'>Tools</a></li>
-        <li><a class='btn' href='#'>Gadgets</a></li>
-        <li><a class='btn' href='#'>Websites</a></li>
-    </ul>
-</nav>
+<Layout>
+    <nav class='flex w-full pt-8 px-15 items-center justify-between h-16'>
+        <img class='size-10 rounded-sm' src={logo.src} alt='Logo frontends' />
+        <ul class='flex gap-3'>
+            <li><a class='btn' href='#tools'>Tools</a></li>
+            <li><a class='btn' href='#'>Gadgets</a></li>
+            <li><a class='btn' href='#'>Websites</a></li>
+        </ul>
+    </nav>
+</Layout>

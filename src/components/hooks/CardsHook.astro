@@ -1,0 +1,31 @@
+---
+import { Icon } from "astro-icon/components"
+import type { Tool } from "./dataTools"
+
+interface Props {
+    miduItems: Tool[]
+}
+
+const { miduItems } = Astro.props as Props
+---
+
+<div class='bg-white/80 grid grid-cols-3 grid-rows-2 gap-2 my-8'>
+    {
+        miduItems.map((element) => {
+            return (
+                <div class='flex items-center justify-start  bg-white shadow-sm hover:shadow-xl transition duration-200 p-5 rounded-2xl '>
+                    <div>
+                        <Icon
+                            class='size-15 mx-4 text-gray-600'
+                            name={element.iconName}
+                        />
+                    </div>
+                    <div>
+                        <h2>{element.title}</h2>
+                        <p>{element.description}</p>
+                    </div>
+                </div>
+            )
+        })
+    }
+</div>

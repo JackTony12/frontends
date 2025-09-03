@@ -1,0 +1,47 @@
+---
+import midu from "/public/images/midudev.jpg"
+import Layout from "../../layouts/Layout.astro"
+import { miduVscode, miduWebTools } from "../../components/hooks/dataTools"
+import { Icon } from "astro-icon/components"
+import CardsHook from "../../components/hooks/CardsHook.astro"
+---
+
+<Layout>
+    <section class='w-full my-8 font-[poppins]'>
+        <div class='flex gap-5'>
+            <img
+                class='size-44 rounded-xl object-cover'
+                src={midu.src}
+                alt='Midudev'
+            />
+            <div class='mt-3'>
+                <small class='text-text'>
+                    Herramientas usadas por el streamer Midudev
+                </small>
+                <h2 class='text-7xl font-medium text-gray-500'>Midudev</h2>
+                <small class='text-text'
+                    >haz click en la card para ir al sitio web oficial de la
+                    herramienta que quieras
+                </small>
+                <a
+                    rel='noreferrer noopener'
+                    class='my-2'
+                    target='_blank'
+                    href='https://midudev.com'
+                    ><Icon class='size-6 text-text' name='link' /></a
+                >
+            </div>
+        </div>
+        <h2 class='my-4 text-text text-xl'>
+            <Icon class='inline-block size-6 text-text' name='vscode' /> Extensiones
+            de visual studio code
+        </h2>
+        <CardsHook miduItems={miduVscode} />
+        <p>
+            <Icon class='inline-block size-6 text-text' name='edition' /> Edicion
+            de imagenes
+        </p>
+        <CardsHook miduItems={miduWebTools} />
+        <a href='/#tools'>Back</a>
+    </section>
+</Layout>

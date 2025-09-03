@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "frontends",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -9,8 +9,18 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/react": "^4.3.0",
     "@tailwindcss/vite": "^4.1.12",
-    "astro": "^5.13.2",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "astro": "^5.13.4",
+    "astro-icon": "^1.1.5",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
     "tailwindcss": "^4.1.12"
+  },
+  "devDependencies": {
+    "axobject-query": "^4.1.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2"
   }
 }

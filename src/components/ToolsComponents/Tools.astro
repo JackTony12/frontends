@@ -1,33 +1,161 @@
 ---
 import midu from "/public/images/midudev.jpg"
+import { Icon } from "astro-icon/components"
+import img from "/public/images/images.jpg"
+import Layout from "../../layouts/Layout.astro"
 ---
 
-<div class='my-12'>
-    <h2 class='font-[BlackF] font-bold text-4xl text-text'>TOOLS</h2>
-</div>
-
-<section
-    class='grid grid-cols-6 grid-rows-8 gap-4 w-full h-[600px] [&_div]:overflow-hidden [&_div]:rounded-xl'
->
-    <div class='col-span-3 row-span-5 group relative flex bg-blue-600'>
-        <img
-            class='h-full mask-r-from-30% group-hover:scale-120 group-hover:blur-sm transition duration-200'
-            src={midu.src}
-            alt='Midu'
-        />
-        <h3 class='absolute p-2 blackF_w'>Midudev</h3>
-        <div class='absolute bottom-0 p-2 backdrop-blur-2xl'>
-            <p class='text-white text-sm'>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Assumenda dolores illum impedit ipsa natus pariatur, harum dolor
-                reprehenderit hic asperiores qui, ut quod quia perferendis.
-                Error possimus fugit provident at.
-            </p>
-            <a target='_blank' href='https://midudev.com'>Ir</a>
-        </div>
+<Layout>
+    <div class='my-12 mx-2 font-[BlackF] text-text'>
+        <h2 class='font-bold text-4xl flex alingn-center'>
+            <Icon class='inline-block size-8 mr-2' name='tools' />TOOLS
+        </h2>
+        <p class='font-[poppins]'>
+            Herramientas indispensables para nosotros los devs frontends
+        </p>
     </div>
-    <div class='col-span-3 row-span-5 col-start-4 bg-amber-600'>2</div>
-    <div class='col-span-2 row-span-3 row-start-6'>3</div>
-    <div class='col-span-3 row-span-3 col-start-3 row-start-6'>4</div>
-    <div class='row-span-3 col-start-6 row-start-6'>5</div>
-</section>
+
+    <section
+        transition:persist
+        id='tools'
+        class='w-full h-[1500px] px-2 grid grid-cols-1 grid-rows-5 gap-4 md:h-[600px] md:grid-cols-6 md:grid-rows-2
+           [&_div]:overflow-hidden [&_div]:rounded-xl'
+    >
+        <div
+            class='group md:col-span-3 md:row-span-1 relative flex bg-blue-900'
+        >
+            <img
+                class='h-full mask-r-from-30% group-hover:scale-120 group-hover:blur-sm transition duration-200'
+                src={midu.src}
+                alt='Midu'
+            />
+            <div class='p-5 absolute left-2 top-2'>
+                <p class='text-white font-[poppins] text-sm'>
+                    Herramientas usadas por
+                </p>
+                <h3 class='blackF_w'>Midudev</h3>
+            </div>
+            <div class='absolute bottom-0 p-2 backdrop-blur-2xl font-[poppins]'>
+                <p class='text-white text-sm'>
+                    Seguro más de una vez nos hemos fascinado con las
+                    herramientas que facilitan el trabajo de nuestro querido
+                    Midu, y hemos pensado en buscarlas para usarlas también,
+                    pero al final nunca lo hacemos o se nos olvida. Aquí te
+                    traigo las más utilizadas por Midudev.
+                </p>
+            </div>
+            <a
+                class='group btn-slide btn-tools absolute right-2 top-2'
+                href='/tools/Midu'
+                >Mirar <span class='arrow-slide inline-block'>></span>
+            </a>
+        </div>
+
+        <div class='text-white relative md:col-span-3 bg-gray-800'>
+            <video
+                src='/images/uxAnimation.mp4'
+                loop
+                muted
+                autoplay
+                class='w-full h-full object-cover'
+            >
+            </video>
+            <div class='p-5 absolute left-2 top-2'>
+                <p class='font-[poppins] text-sm'>Herramientas de</p>
+                <h3 class='blackF_w'>UI/UX</h3>
+            </div>
+            <div class='absolute bottom-0 p-2 backdrop-blur-sm font-[poppins]'>
+                <p class='text-sm'>
+                    Los mejores recursos y sitios web donde encontraras miles de
+                    componentes predise;ados para tus proyectos
+                </p>
+            </div>
+            <a
+                class='group btn-slide btn-tools absolute right-2 top-2'
+                href='/tools/Ui'
+                >Mirar <span class='arrow-slide inline-block'>></span>
+            </a>
+        </div>
+
+        <div class='relative md:col-span-2 bg-pink-400'>
+            <video
+                src='/images/bd.mp4'
+                loop
+                muted
+                autoplay
+                class='w-full h-full object-cover'
+            >
+            </video>
+            <div class='p-5 absolute left-2 top-2'>
+                <p class='text-white font-[poppins] text-sm'>
+                    Aqui encontraras
+                </p>
+                <h3 class='blackF_w'>APIS</h3>
+            </div>
+            <div
+                class='absolute w-full bottom-0 p-2 backdrop-blur-2xl font-[poppins]'
+            >
+                <p class='text-white text-sm'>
+                    Aqui encontraras recursos de APIS gratuitas para tus
+                    proyectos.
+                </p>
+            </div>
+            <a
+                class='group btn-slide btn-tools absolute right-2 top-2'
+                href='/tools/Api'
+                >Mirar <span class='arrow-slide inline-block'>></span>
+            </a>
+        </div>
+
+        <div class='relative md:col-span-2 bg-gray-900'>
+            <img
+                class='w-full h-full object-cover mask-l-from-40% group-hover:scale-120 group-hover:blur-sm transition duration-200'
+                src={img.src}
+                alt='Images editors'
+            />
+            <div class='p-5 absolute left-2 top-2'>
+                <p class='text-white font-[poppins] text-sm'>
+                    Herramientas para
+                </p>
+                <h3 class='blackF_w'>Edicion de imagenes</h3>
+            </div>
+            <div class='absolute bottom-0 p-2 backdrop-blur-2xl font-[poppins]'>
+                <p class='text-white text-sm'>
+                    Recorta, mejora, optimiza y expande tus imagenes para
+                    obtener la mejor calidad en tus proyectos.
+                </p>
+            </div>
+            <a
+                class='group btn-slide btn-tools absolute right-2 top-2'
+                href='/tools/Images'
+                >Mirar <span class='arrow-slide inline-block'>></span>
+            </a>
+        </div>
+
+        <div class='relative md:col-span-2'>
+            <video
+                src='/images/animation.mp4'
+                loop
+                muted
+                autoplay
+                class='w-full h-full object-cover'
+            >
+            </video>
+            <div class='p-5 absolute left-2 top-2'>
+                <p class='text-white font-[poppins] text-sm'>Librerias para</p>
+                <h3 class='blackF_w'>Animaciones js</h3>
+            </div>
+            <div class='absolute bottom-0 p-2 backdrop-blur-2xl font-[poppins]'>
+                <p class='text-white text-sm'>
+                    Las mejores librerias para animaciones js que podras
+                    encontrar
+                </p>
+            </div>
+            <a
+                class='group btn-slide btn-tools absolute right-2 top-2'
+                href='/tools/Animations'
+                >Mirar <span class='arrow-slide inline-block'>></span>
+            </a>
+        </div>
+    </section>
+</Layout>

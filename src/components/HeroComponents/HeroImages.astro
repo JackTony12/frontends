@@ -1,11 +1,11 @@
 ---
 import p1 from "/public/images/programer1.png"
-import AppleCard from "./AppleCardAnimate.astro"
+import CardAnimate from "./CardAnimate"
 ---
 
 <div class='h-[400px] w-full flex'>
     <div class='h-full w-[50%] flex justify-center items-center'>
-        <AppleCard />
+        <CardAnimate client:only />
     </div>
     <div class='h-full w-[50%] flex justify-center'>
         <img class='mask-b-from-80%' src={p1.src} alt='Programers' />

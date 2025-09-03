@@ -4,29 +4,17 @@ import HeroImages from "./HeroImages.astro"
 ---
 
 <section
-	class='h-[800px] rounded-4xl w-full bg-linear-to-l from-primary2 to-primary'
+	class='h-[800px] rounded-b-4xl w-full bg-linear-to-l from-primary2 to-primary'
 >
 	<Nav />
 	<div
 		id='fContainer'
-		class='h-[150px] mt-[50px] w-full text-[10em] font-bold font-[BlackF] flex justify-center items-center text-white'
+		class='h-[150px] mt-[50px] w-full text-[4em] md:text-[10em] font-bold font-[BlackF] flex justify-center items-center text-white'
 	>
+		FRONTEDS
 	</div>
 	<p class='w-full text-center mb-8 text-white font-bold'>
-		IMPULSAMOS TUS PRODUCTOS CON INTERFACES QUE ENVUELVEN
+		CONVERTIMOS LO ORDINARIO A LO EXTRAORDINARIO
 	</p>
 	<HeroImages />
 </section>
-<script>
-	const fronContainer = document.getElementById("fContainer")
-	const frontends = ["F", "R", "O", "N", "T", "E", "N", "D", "S"]
-	let count = 0
-	let f = ""
-	const timer = setInterval(() => {
-		console.log(timer)
-		if (!fronContainer || count > 8) return clearInterval(timer)
-		f += frontends[count]
-		fronContainer.innerText = f
-		count++
-	}, 500)
-</script>
